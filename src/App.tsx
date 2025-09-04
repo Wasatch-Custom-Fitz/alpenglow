@@ -6,6 +6,7 @@ import { useEffect } from "react"
 import { initGA } from "./utils/analytics"
 import { logPageView } from "./utils/analytics"
 import ComponentShowcasePage from "./pages/ComponentShowcasePage"
+import CalendarPage from "./pages/CalendarPage"
 
 const App = () => {
   const { isDark } = useConfigContext()
@@ -35,6 +36,10 @@ const App = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/component-showcase" element={<ComponentShowcasePage />} />
+      <Route path="/calendar" element={<CalendarPage />} />
+      <Route path="/book-appointment" element={<CalendarPage />} />
+      <Route path="/schedule" element={<CalendarPage />} />
+
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
