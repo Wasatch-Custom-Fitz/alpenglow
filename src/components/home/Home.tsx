@@ -366,7 +366,7 @@ export default function HomePage() {
                 <CardContent>
                   <a
                     href={`tel:${TELEPHONE}`}
-                    className="text-foreground font-medium hover:text-primary transition-colors"
+                    className="text-primary font-medium hover:text-primary/80 transition-colors"
                   >
                     (801) 683-9425
                   </a>
