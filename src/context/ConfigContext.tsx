@@ -21,9 +21,9 @@ export const ConfigProvider = ({ children }: { children: React.ReactNode }) => {
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("color")
       if (stored) return stored === "dark"
-      return true // Default to dark mode
+      return false // Default to light mode
     }
-    return true // Default to dark mode
+    return false // Default to light mode
   })
 
   return (
