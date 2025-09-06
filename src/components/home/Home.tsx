@@ -330,12 +330,12 @@ export default function HomePage() {
                   <p className="text-foreground font-medium">357 E 3300 S #9</p>
                   <p className="text-muted-foreground">South Salt Lake, UT 84115</p>
                   <div className="flex flex-col sm:flex-row gap-2 mt-4">
-                    <Button variant="outline" size="sm" asChild className="text-xs bg-transparent">
+                    <Button variant="secondary" size="sm" asChild className="text-xs">
                       <a href={LINKS.GOOGLE_MAPS} target="_blank" rel="noopener noreferrer">
                         Open in Google Maps
                       </a>
                     </Button>
-                    <Button variant="outline" size="sm" asChild className="text-xs bg-transparent">
+                    <Button variant="secondary" size="sm" asChild className="text-xs">
                       <a href={LINKS.APPLE_MAPS} target="_blank" rel="noopener noreferrer">
                         Open in Apple Maps
                       </a>
