@@ -1,8 +1,9 @@
 export const IMAGE_URLS = {
-  BOOT_FITTING_PROCESS: "https://glacier.wasatchfitz.com/images/boot-fitting-process.jpg",
   SALT_LAKE_CITY_MOUNTAINS: "https://glacier.wasatchfitz.com/images/salt-lake-city-mountains.jpeg",
-  FOOT_MEASUREMENT: "https://glacier.wasatchfitz.com/images/foot-measurement.jpg",
   WASATCH_BANNER_LOGO: "https://glacier.wasatchfitz.com/images/wasatch-banner-logo.png",
+  FOOT_MEASUREMENT: "https://glacier.wasatchfitz.com/images/foot-measurement.jpg",
+  MANDY_BOOT: "https://glacier.wasatchfitz.com/images/mandy-boot.jpeg",
+  BOOT_FITTING_PROCESS: "https://glacier.wasatchfitz.com/images/boot-fitting-process.jpg",
 }
 
 export const LINKS = {

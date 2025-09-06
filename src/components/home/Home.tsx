@@ -215,12 +215,12 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <h3 className="text-3xl font-bold text-center text-foreground mb-8">Professional Boot Fitting Process</h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <img
                 src={IMAGE_URLS.FOOT_MEASUREMENT}
                 alt="Professional foot measurement using precision tools"
-                className="w-full h-64 object-cover rounded-lg shadow-lg mb-4"
+                className="w-full max-h-64 object-contain mb-4"
               />
               <h4 className="font-semibold text-foreground mb-2">Precision Measurement</h4>
               <p className="text-sm text-muted-foreground">
@@ -229,9 +229,20 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <img
+                src={IMAGE_URLS.MANDY_BOOT}
+                alt="Custom fitted ski boot showing professional craftsmanship"
+                className="w-full max-h-64 object-contain mb-4"
+              />
+              <h4 className="font-semibold text-foreground mb-2">Custom Craftsmanship</h4>
+              <p className="text-sm text-muted-foreground">
+                Professional modifications and adjustments tailored to your unique foot shape and skiing style
+              </p>
+            </div>
+            <div className="text-center">
+              <img
                 src={IMAGE_URLS.BOOT_FITTING_PROCESS}
                 alt="Ski boot fitting process with professional equipment"
-                className="w-full h-64 object-cover rounded-lg shadow-lg mb-4"
+                className="w-full max-h-64 object-contain mb-4"
               />
               <h4 className="font-semibold text-foreground mb-2">Expert Fitting</h4>
               <p className="text-sm text-muted-foreground">
