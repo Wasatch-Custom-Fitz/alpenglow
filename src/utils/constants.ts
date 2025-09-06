@@ -4,6 +4,9 @@ export const IMAGE_URLS = {
   FOOT_MEASUREMENT: "https://glacier.wasatchfitz.com/images/foot-measurement.jpg",
   MANDY_BOOT: "https://glacier.wasatchfitz.com/images/mandy-boot.jpeg",
   BOOT_FITTING_PROCESS: "https://glacier.wasatchfitz.com/images/boot-fitting-process.jpg",
+  SNOWMAN: "https://glacier.wasatchfitz.com/images/snowman.png",
+  SNOWMAN_BLACK: "https://glacier.wasatchfitz.com/images/snowman-black.png",
+  SNOWMAN_BLACK_BG: "https://glacier.wasatchfitz.com/images/snowman-black-background.png",
 }
 
 export const LINKS = {

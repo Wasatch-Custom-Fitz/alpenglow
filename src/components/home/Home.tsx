@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { MapPin, Phone, CheckCircle, Star, Mountain, Info } from "lucide-react"
+import { MapPin, Phone, CheckCircle, Star, Info, Mountain } from "lucide-react"
 import ThemeToggle from "@/components/theme/ThemeToggle"
+import SnowmanLogo from "@/components/snowman/SnowmanLogo"
 import { IMAGE_URLS, LINKS, TELEPHONE } from "@/utils/constants"
 
 export default function HomePage() {
@@ -13,7 +14,7 @@ export default function HomePage() {
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Mountain className="h-8 w-8" style={{ color: "var(--dark-blue)" }} />
+            <SnowmanLogo className="h-8 w-8" />
             <h1 className="text-2xl font-bold text-foreground">Wasatch Custom Fitz</h1>
           </div>
           <div className="flex items-center gap-2">
@@ -455,7 +456,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <Mountain className="h-6 w-6" style={{ color: "var(--dark-blue)" }} />
+              <SnowmanLogo className="h-6 w-6" />
               <span className="font-semibold text-foreground">Wasatch Custom Fitz</span>
             </div>
             <div className="text-sm text-muted-foreground">
