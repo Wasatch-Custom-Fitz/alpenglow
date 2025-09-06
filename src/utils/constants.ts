@@ -1,8 +1,8 @@
 export const IMAGE_URLS = {
-  BOOT_FITTING_PROCESS: "https://main.d1vuzq9jnijf6h.amplifyapp.com/images/boot-fitting-process.jpg",
-  SALT_LAKE_CITY_MOUNTAINS: "https://main.d1vuzq9jnijf6h.amplifyapp.com/images/salt-lake-city-mountains.jpeg",
-  FOOT_MEASUREMENT: "https://main.d1vuzq9jnijf6h.amplifyapp.com/images/foot-measurement.jpg",
-  WASATCH_BANNER_LOGO: "https://main.d1vuzq9jnijf6h.amplifyapp.com/images/wasatch-banner-logo.png",
+  BOOT_FITTING_PROCESS: "https://glacier.wasatchfitz.com/images/boot-fitting-process.jpg",
+  SALT_LAKE_CITY_MOUNTAINS: "https://glacier.wasatchfitz.com/images/salt-lake-city-mountains.jpeg",
+  FOOT_MEASUREMENT: "https://glacier.wasatchfitz.com/images/foot-measurement.jpg",
+  WASATCH_BANNER_LOGO: "https://glacier.wasatchfitz.com/images/wasatch-banner-logo.png",
 }
 
 export const LINKS = {
