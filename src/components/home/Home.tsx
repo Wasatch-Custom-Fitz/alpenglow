@@ -32,7 +32,7 @@ export default function HomePage() {
       <section
         className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${IMAGE_URLS.SALT_LAKE_CITY_MOUNTAINS})`,
+          backgroundImage: `url(${IMAGE_URLS.SUN_1})`,
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
@@ -67,6 +67,31 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Scheduling Update Notice */}
+      <section className="py-8 bg-amber-50 dark:bg-amber-950/20 border-b border-amber-200 dark:border-amber-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-amber-200 dark:border-amber-800 bg-amber-100/50 dark:bg-amber-950/30">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
+                  <Info className="h-5 w-5" />
+                  Notice of Scheduling Update
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                  Starting October 1st, I'll be using a new appointment system designed to make booking easier and
+                  clearer. You'll notice updated appointment types, credit card required for booking, and a new
+                  cancellation policy to help keep the schedule running smoothly. If you've already booked an
+                  appointment before that date, your time is still confirmed — no action needed. But as always, for the
+                  first little bit, please check that the time zones are accurate.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Mission Statement */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
@@ -79,6 +104,64 @@ export default function HomePage() {
               together to understand and alleviate pain points—creating solutions that bring comfort, confidence, and
               performance to every step on the mountain.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-center text-foreground mb-8">How It Works</h3>
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                The right fit changes everything. That's why I don't sell ski boots — I want the freedom to recommend
+                what's truly right for you, without bias or sales pressure. My only goal is to get you skiing, running,
+                or adventuring in comfort and confidence.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <Card className="border-border hover:border-primary/50 transition-colors">
+                  <CardHeader>
+                    <CardTitle style={{ color: "var(--dark-blue)" }}>Full Fit Session</CardTitle>
+                    <CardDescription>Where we start - the foundation</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Think of it as the foundation: I'll evaluate your fit, take notes, and often begin custom work
+                      like footbeds during this first step. The second step is your Final Fit Session, where we refine,
+                      mold, and make sure your setup feels right before you're out the door.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-border hover:border-primary/50 transition-colors">
+                  <CardHeader>
+                    <CardTitle style={{ color: "var(--dark-blue)" }}>Boot Work Drop-Off</CardTitle>
+                    <CardDescription>Need something quick?</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      A Boot Work Drop-Off lets you leave your boots with me for adjustments, and I'll have them ready
+                      in order of arrival — usually by the next day.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-border hover:border-primary/50 transition-colors md:col-span-2">
+                  <CardHeader>
+                    <CardTitle style={{ color: "var(--dark-blue)" }}>Custom Fit Session</CardTitle>
+                    <CardDescription>When your needs fall somewhere in between</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      A Custom Fit Session gives us time together to handle liner molding, footbeds, or detailed
+                      adjustments on the spot. It's hands-on, collaborative, and built around you.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>

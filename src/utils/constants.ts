@@ -7,6 +7,8 @@ export const IMAGE_URLS = {
   SNOWMAN: "https://glacier.wasatchfitz.com/images/snowman.png",
   SNOWMAN_BLACK: "https://glacier.wasatchfitz.com/images/snowman-black.png",
   SNOWMAN_BLACK_BG: "https://glacier.wasatchfitz.com/images/snowman-black-background.png",
+  SUN_1: "https://glacier.wasatchfitz.com/images/sun-1.jpeg",
+  SUN_2: "https://glacier.wasatchfitz.com/images/sun-2.jpeg",
 }
 
 export const LINKS = {
