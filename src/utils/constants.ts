@@ -9,10 +9,22 @@ export const IMAGE_URLS = {
   SNOWMAN_BLACK_BG: "https://glacier.wasatchfitz.com/images/snowman-black-background.png",
   SUN_1: "https://glacier.wasatchfitz.com/images/sun-1.jpeg",
   SUN_2: "https://glacier.wasatchfitz.com/images/sun-2.jpeg",
+  SNOWCLOUD_ORANGE_DARK: "https://glacier.wasatchfitz.com/images/snowcloud-orange-dark.png",
+  SNOWCLOUD_ORANGE_LIGHT: "https://glacier.wasatchfitz.com/images/snowcloud-orange-light.png",
+  MOUNTAINS_1: "https://glacier.wasatchfitz.com/images/mountains-1.jpg",
+  MOUNTAINS_2: "https://glacier.wasatchfitz.com/images/mountains-2.jpg",
+  MOUNTAINS_7: "https://glacier.wasatchfitz.com/images/mountains-7.jpg",
+  MOUNTAINS_8: "https://glacier.wasatchfitz.com/images/mountains-8.jpg",
+  MOUNTAINS_9: "https://glacier.wasatchfitz.com/images/mountains-9.jpg",
+  FOOTBED: "https://glacier.wasatchfitz.com/images/footbed.webp",
+  FOOTPAD: "https://glacier.wasatchfitz.com/images/footpad.webp",
+  INTUITION: "https://glacier.wasatchfitz.com/images/boot-liner.jpg",
+  ZIPFIT: "https://glacier.wasatchfitz.com/images/zipfit.jpg",
+  BOOSTER_STRAP: "https://glacier.wasatchfitz.com/images/booster-strap.jpg",
 }
 
 export const LINKS = {
-  BOOK_APPOINTMENT: "https://calendar.google.com/calendar/u/0/appointments/AcZssZ13_SjbTcfLcg7AX7xWcAIQvTZL2PvveTNykCI",
+  BOOK_APPOINTMENT: "https://wasatchfitzcalendar.as.me",
   GEE_LINSKY: "https://geelinsky.com",
   GOOGLE_MAPS: "https://maps.app.goo.gl/DGniv8HLf1EJmYuk6",
   APPLE_MAPS:

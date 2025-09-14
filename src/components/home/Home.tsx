@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <SnowmanLogo className="h-8 w-8" />
-            <h1 className="text-2xl font-bold text-foreground">Wasatch Custom Fitz</h1>
+            <h1 className="text-2xl font-bold text-primary">Wasatch Custom Fitz</h1>
           </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
@@ -32,7 +32,7 @@ export default function HomePage() {
       <section
         className="relative py-20 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${IMAGE_URLS.SUN_1})`,
+          backgroundImage: `url(${IMAGE_URLS.MOUNTAINS_2})`,
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
@@ -51,13 +51,7 @@ export default function HomePage() {
                 Schedule Your Fitting
               </a>
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 text-white hover:bg-white/10 bg-white/5 backdrop-blur-sm"
-              style={{ borderColor: "white" }}
-              asChild
-            >
+            <Button size="lg" variant="secondary" asChild>
               <a href={`tel:${TELEPHONE}`}>
                 <Phone className="h-4 w-4" />
                 (801) 683-9425
@@ -74,17 +68,35 @@ export default function HomePage() {
             <Card className="border-amber-200 dark:border-amber-800 bg-amber-100/50 dark:bg-amber-950/30">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
-                  <Info className="h-5 w-5" />
-                  Notice of Scheduling Update
+                  <Info className="h-5 w-5" />A Little Scheduling Update
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
                 <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  Starting October 1st, I'll be using a new appointment system designed to make booking easier and
-                  clearer. You'll notice updated appointment types, credit card required for booking, and a new
-                  cancellation policy to help keep the schedule running smoothly. If you've already booked an
-                  appointment before that date, your time is still confirmed — no action needed. But as always, for the
-                  first little bit, please check that the time zones are accurate.
+                  First off — thank you! I know my scheduling system hasn't always been the smoothest, and I can't tell
+                  you how much I appreciate your patience and support through it all. You keep coming back, and that
+                  means the world to me.
+                </p>
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                  The new appointment system is already live and ready to use, and I encourage you to start booking
+                  through it now. I'll officially switch over to it on October 1st, after a short "test mode" period to
+                  smooth out any kinks before the busy season.
+                </p>
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                  In the meantime, the Google Calendar link will still be around if we need it, but please know that any
+                  bookings there will now require a deposit to hold your spot.
+                </p>
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                  One quick request if you use the Google calendar link: please double-check that the time zone is
+                  correct in your confirmation email. If it looks off, just email me right away so I can fix it for you.
+                </p>
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                  If you've already confirmed an appointment with me before these changes, your spot is fully guaranteed
+                  — no action needed.
+                </p>
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                  Thanks again for sticking with me. I'm excited for this new system to make your booking experience
+                  easier and reliable. Now let's all do our pray for snow dances!
                 </p>
               </CardContent>
             </Card>
@@ -96,7 +108,7 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-foreground mb-6">Our Mission</h3>
+            <h3 className="text-3xl font-bold text-primary mb-6">Our Mission</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               At Wasatch Custom Fitz, I am dedicated to delivering a personalized, precision-driven bootfitting
               experience rooted in patience, inclusivity, and deep listening. Backed by apprenticeship, classroom
@@ -112,7 +124,7 @@ export default function HomePage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-foreground mb-8">How It Works</h3>
+            <h3 className="text-3xl font-bold text-center text-secondary mb-8">How It Works</h3>
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 The right fit changes everything. That's why I don't sell ski boots — I want the freedom to recommend
@@ -169,7 +181,7 @@ export default function HomePage() {
       {/* Services */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center text-foreground mb-12">Services & Pricing</h3>
+          <h3 className="text-3xl font-bold text-center text-primary mb-12">Services & Pricing</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="border-border hover:border-primary/50 transition-colors">
               <CardHeader>
@@ -177,7 +189,7 @@ export default function HomePage() {
                 <CardDescription>New Boot Recommendation or Old Boot Refit</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-foreground mb-2">$180</div>
+                <div className="text-lg font-bold text-secondary mb-2">$180</div>
                 <div className="text-sm text-muted-foreground mb-4">or $90/hour</div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
@@ -202,7 +214,7 @@ export default function HomePage() {
                 <CardDescription>Stretches, Punches & Grinding</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-foreground mb-2">$65</div>
+                <div className="text-lg font-bold text-secondary mb-2">$65</div>
                 <div className="text-sm text-muted-foreground mb-4">per area or $225 for boot pair package</div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
@@ -227,7 +239,7 @@ export default function HomePage() {
                 <CardDescription>Heat Molding & Custom Fitting</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-foreground mb-2">$85</div>
+                <div className="text-lg font-bold text-secondary mb-2">$85</div>
                 <div className="text-sm text-muted-foreground mb-4">included with new liner purchase</div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
@@ -252,7 +264,7 @@ export default function HomePage() {
                 <CardDescription>Custom Shell Modifications</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-foreground mb-2">$85</div>
+                <div className="text-lg font-bold text-secondary mb-2">$85</div>
                 <div className="text-sm text-muted-foreground mb-4">per service</div>
               </CardContent>
             </Card>
@@ -263,7 +275,7 @@ export default function HomePage() {
                 <CardDescription>Buckles, Straps & Systems</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-lg font-bold text-foreground mb-4">Various Pricing</div>
+                <div className="text-base font-bold text-secondary mb-4">Various Pricing</div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
@@ -287,7 +299,7 @@ export default function HomePage() {
                 <CardDescription>Foam Padding Solutions</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-foreground mb-2">$20-$100</div>
+                <div className="text-lg font-bold text-secondary mb-2">$20-$100</div>
                 <div className="text-sm text-muted-foreground mb-4">based on complexity</div>
               </CardContent>
             </Card>
@@ -295,10 +307,80 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Name Brand Products */}
+      <section
+        className="relative py-16 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${IMAGE_URLS.MOUNTAINS_1})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <h3 className="text-3xl font-bold text-center text-white mb-12">Premium Name Brand Products</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <img
+                src={IMAGE_URLS.FOOTBED}
+                alt="Sidas Footbed - Custom orthotic insoles for ski boots"
+                className="w-full max-h-64 object-contain mb-4"
+              />
+              <h4 className="font-semibold text-white mb-2">Sidas Footbeds</h4>
+              <p className="text-sm text-white/90">
+                Professional-grade custom footbeds designed to provide superior arch support and alignment
+              </p>
+            </div>
+            <div className="text-center">
+              <img
+                src={IMAGE_URLS.INTUITION}
+                alt="Intuition Liners - Premium ski boot liners"
+                className="w-full max-h-64 object-contain mb-4"
+              />
+              <h4 className="font-semibold text-white mb-2">Intuition Liners</h4>
+              <p className="text-sm text-white/90">
+                Premium boot liners that mold to your foot shape when heated for exceptional comfort
+              </p>
+            </div>
+            <div className="text-center">
+              <img
+                src={IMAGE_URLS.ZIPFIT}
+                alt="ZipFit Liners - Cork-filled moldable ski boot liners"
+                className="w-full max-h-64 object-contain mb-4"
+              />
+              <h4 className="font-semibold text-white mb-2">ZipFit Liners</h4>
+              <p className="text-sm text-white/90">
+                Revolutionary cork-filled liners that compress and conform to create a truly custom fit
+              </p>
+            </div>
+            <div className="text-center">
+              <img
+                src={IMAGE_URLS.BOOSTER_STRAP}
+                alt="Booster Strap - Power strap for ski boots"
+                className="w-full max-h-64 object-contain mb-4"
+              />
+              <h4 className="font-semibold text-white mb-2">Booster Strap</h4>
+              <p className="text-sm text-white/90">
+                Aftermarket power strap that improves heel hold and power transmission for better control
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-white/90 mb-4">
+              All products are professionally installed and fitted to ensure optimal performance
+            </p>
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
+              <a href={LINKS.BOOK_APPOINTMENT} target="_blank" rel="noopener noreferrer">
+                Schedule Your Consultation
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Professional Boot Fitting Process */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center text-foreground mb-8">Professional Boot Fitting Process</h3>
+          <h3 className="text-3xl font-bold text-center text-secondary mb-8">Professional Boot Fitting Process</h3>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <img
@@ -341,7 +423,7 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-foreground mb-8">Why Choose Wasatch Custom Fitz</h3>
+            <h3 className="text-3xl font-bold text-center text-primary mb-8">Why Choose Wasatch Custom Fitz</h3>
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-6">
               <p className="text-lg text-foreground leading-relaxed italic">
                 "I know that some customers come in feeling like they've been dismissed or talked over in the past—like
@@ -359,7 +441,7 @@ export default function HomePage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-foreground mb-6">About the Fitter</h3>
+            <h3 className="text-3xl font-bold text-secondary mb-6">About the Fitter</h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Bootfitting is part science, part art—and a little bit therapy. Every fit is a collaboration: I listen
               deeply, analyze each detail, and craft solutions that not only remove discomfort but also unlock
@@ -399,11 +481,103 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Customer Reviews */}
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-3xl font-bold text-center text-primary mb-12">What Our Customers Say</h3>
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+              <Card className="border-border hover:border-primary/50 transition-colors">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-lg" style={{ color: "var(--dark-blue)" }}>
+                      Paulina
+                    </CardTitle>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    "My first time working with a bootfitter and I'm so glad I chose to work with Mandy!! She made the
+                    process super chill and pleasant, yet you can tell she is a DIALED master of her craft. I came in
+                    with boot pain from boots that were breaking down and slightly too big for me. I sent it and chose
+                    to downsize my new pair and brought those in with me. She can immediately tell what the fit is like
+                    and what needs to happen, thanks to her talent and many years of experience! (15+!!) I have very
+                    high arches and collapsing feet, and a fun little pinky bunion. I pinpointed where it hurt and she
+                    punched it out with expertise. Viola! Not only do they feel great, but I can already tell these will
+                    level up my skiing! So much more control! Aw yeah! Thank you so much Mandy, you are a rockstar!"
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border hover:border-primary/50 transition-colors">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-lg" style={{ color: "var(--dark-blue)" }}>
+                      Mike
+                    </CardTitle>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    "Mandy is the best! She knows more about ski boots and feet than anyone on earth, I think. If you
+                    ski more than a few days a season and need new boots you should absolutely get a professional
+                    fitting done, and I can't recommend Mandy enough. It is so worth it, you can't put a price on a
+                    custom fit when you're wearing a piece of equipment that isn't designed for comfort. A custom fit
+                    will make all the difference! Mandy's process is so thorough and she will get you into a boot that
+                    works for you."
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-border hover:border-primary/50 transition-colors">
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <CardTitle className="text-lg" style={{ color: "var(--dark-blue)" }}>
+                      Robert
+                    </CardTitle>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    "Wow. I will lead with this: I've been skiing on custom fitted boots for 15 years and never met
+                    anyone as good as Mandy. If you have an issue, a question, a problem, or you just want the absolute
+                    best fitting boots, go see Mandy. Wait if you have to (she gets busy) but just GO. Other fitters may
+                    be intelligent and skilled, but no one cares as much about getting you skiing on equipment that
+                    works. She doesn't sell boots, so her sole purpose is to help fix what you have, or help you get
+                    into the right ones, then do the work to perfect them. Despite seeing other well known fitters
+                    around the Wasatch area I have skied in compromised boots for years. Now I'm sure it was a
+                    combination of the fact that most shops will sell you what they have, whether it's correct or not.
+                    And, they're only going to work so hard to get them right. Mandy spent SIX HOURS on my boots today,
+                    and they fit like they were poured around my feet. She never got frustrated, always encouraged me to
+                    be patient, and she nailed them. I can't wait to take them out."
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-foreground mb-8">Visit Our Shop</h3>
+            <h3 className="text-3xl font-bold text-center text-secondary mb-8">Visit Our Shop</h3>
 
             <div className="flex justify-center mb-12">
               <img
@@ -448,12 +622,19 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <a
+                    href="mailto:mandy@wasatchfitz.com"
+                    className="text-primary font-medium hover:text-primary/80 transition-colors block mb-2"
+                  >
+                    mandy@wasatchfitz.com
+                  </a>
+                  <p className="text-muted-foreground mb-3">Email for questions, or concerns</p>
+                  <a
                     href={`tel:${TELEPHONE}`}
-                    className="text-primary font-medium hover:text-primary/80 transition-colors"
+                    className="text-primary font-medium hover:text-primary/80 transition-colors text-sm block"
                   >
                     (801) 683-9425
                   </a>
-                  <p className="text-muted-foreground">Call to schedule or ask questions</p>
+                  <p className="text-muted-foreground text-sm mt-1">Or call if preferred</p>
                 </CardContent>
               </Card>
             </div>
@@ -472,49 +653,50 @@ export default function HomePage() {
                   <DialogTrigger asChild>
                     <Button variant="link" className="text-muted-foreground hover:text-foreground p-0 h-auto text-sm">
                       <Info className="h-3 w-3 mr-1" />
-                      View Appointment & Cancellation Policy
+                      View Appointment, Cancellation & Refund Policy
                     </Button>
                   </DialogTrigger>
                   <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
                     <DialogHeader>
-                      <DialogTitle className="text-xl">Appointment & Cancellation Policy</DialogTitle>
+                      <DialogTitle className="text-xl">Appointment, Cancellation & Refund Policy</DialogTitle>
                     </DialogHeader>
                     <div className="space-y-4 mt-4">
                       <p className="text-muted-foreground">
                         We're grateful you've chosen us for your boot fitting. Because we work by appointment only and
-                        stay fully booked in the winter season, your time is reserved.
+                        stay fully booked during the winter season, your time is reserved just for you.
                       </p>
 
                       <div className="space-y-4">
                         <div>
-                          <h5 className="font-medium mb-3">To keep things fair for everyone:</h5>
                           <div className="space-y-3">
                             <div>
-                              <p className="font-medium text-sm">Deposit:</p>
+                              <p className="font-medium text-sm">Cancellations & Reschedules</p>
                               <p className="text-sm text-muted-foreground">
-                                A small deposit is required at booking. This goes toward your service.
+                                We kindly ask for at least 24–48 hours' notice if you need to cancel or reschedule. You
+                                can cancel from your confirmation email and reschedule from the link provided.
                               </p>
                             </div>
                             <div>
-                              <p className="font-medium text-sm">Cancellations/Reschedules:</p>
+                              <p className="font-medium text-sm">No-Shows & Late Cancellations</p>
                               <p className="text-sm text-muted-foreground">
-                                We kindly ask for at least 24-48 hours' notice if you need to cancel or reschedule. You
-                                can cancel from the confirmation email you receive, and reschedule from the link
-                                provided. With proper notice, your deposit will be applied to your new appointment.
+                                If you cancel with less than 24 hours' notice or don't show up, a $50 fee will be
+                                charged to the card on file. This ensures waitlisted clients have a fair chance to take
+                                the spot.
                               </p>
                             </div>
                             <div>
-                              <p className="font-medium text-sm">No-Shows & Late Cancellations:</p>
+                              <p className="font-medium text-sm">Refunds & Exchanges</p>
                               <p className="text-sm text-muted-foreground">
-                                If you cancel with less than 24 hours' notice or don't show up, the deposit is
-                                non-refundable. This ensures our waitlist clients have a fair chance to take the spot.
+                                Because our services and products are customized for each skier, we don't offer refunds
+                                or exchanges. Please feel free to reach out if we need to find a fair and reasonable
+                                solution.
                               </p>
                             </div>
                             <div>
-                              <p className="font-medium text-sm">Life Happens:</p>
+                              <p className="font-medium text-sm">Life Happens</p>
                               <p className="text-sm text-muted-foreground">
-                                We understand emergencies and unexpected storms happen. Please reach out, and we'll do
-                                our best to accommodate.
+                                We understand emergencies (and unexpected storms) happen. Please reach out, and we'll do
+                                what we can to accommodate.
                               </p>
                             </div>
                           </div>
@@ -540,7 +722,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <SnowmanLogo className="h-6 w-6" />
-              <span className="font-semibold text-foreground">Wasatch Custom Fitz</span>
+              <span className="font-semibold text-primary">Wasatch Custom Fitz</span>
             </div>
             <div className="text-sm text-muted-foreground">
               Website engineered by{" "}

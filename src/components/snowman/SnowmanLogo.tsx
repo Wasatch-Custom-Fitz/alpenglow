@@ -10,7 +10,7 @@ const SnowmanLogo = ({ className = "h-8 w-8", alt = "Snowman logo" }: SnowmanLog
   const { isDark } = useConfigContext()
 
   // Use white snowman for dark theme, black background snowman for light theme
-  const snowmanSrc = isDark ? IMAGE_URLS.SNOWMAN : IMAGE_URLS.SNOWMAN_BLACK
+  const snowmanSrc = isDark ? IMAGE_URLS.SNOWCLOUD_ORANGE_DARK : IMAGE_URLS.SNOWCLOUD_ORANGE_LIGHT
 
   return <img src={snowmanSrc} alt={alt} className={className} />
 }
