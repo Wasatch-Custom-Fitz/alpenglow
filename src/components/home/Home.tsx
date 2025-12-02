@@ -221,8 +221,7 @@ export default function HomePage() {
                 <CardDescription>New Boot Recommendation or Old Boot Refit</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-lg font-bold text-secondary mb-2">$180</div>
-                <div className="text-sm text-muted-foreground mb-4"></div>
+                <div className="text-lg font-bold text-secondary mb-4">$180</div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
