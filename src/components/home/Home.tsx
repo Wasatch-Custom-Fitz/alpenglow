@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { MapPin, Phone, CheckCircle, Star, Info, Mountain } from "lucide-react"
+import { MapPin, Phone, CheckCircle, Star, Info, Mountain, Clock } from "lucide-react"
 import ThemeToggle from "@/components/theme/ThemeToggle"
 import SnowmanLogo from "@/components/snowman/SnowmanLogo"
 import { IMAGE_URLS, LINKS, TELEPHONE } from "@/utils/constants"
@@ -68,36 +68,68 @@ export default function HomePage() {
             <Card className="border-amber-200 dark:border-amber-800 bg-amber-100/50 dark:bg-amber-950/30">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
-                  <Info className="h-5 w-5" />A Little Scheduling Update
+                  <Info className="h-5 w-5" />
+                  Shop Hours & Booking Update
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  First off — thank you! I know my scheduling system hasn't always been the smoothest, and I can't tell
-                  you how much I appreciate your patience and support through it all. You keep coming back, and that
-                  means the world to me.
+              <CardContent className="space-y-5">
+                <p className="text-amber-700 dark:text-amber-300 leading-relaxed text-base">
+                  Thank you so much for booking with me — I truly appreciate you being here.
                 </p>
-                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  The new appointment system is already live and ready to use, and I encourage you to start booking
-                  through it now. I'll officially switch over to it on October 1st, after a short "test mode" period to
-                  smooth out any kinks before the busy season.
-                </p>
-                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  In the meantime, the Google Calendar link will still be around if we need it, but please know that any
-                  bookings there will now require a deposit to hold your spot.
-                </p>
-                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  One quick request if you use the Google calendar link: please double-check that the time zone is
-                  correct in your confirmation email. If it looks off, just email me right away so I can fix it for you.
-                </p>
-                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  If you've already confirmed an appointment with me before these changes, your spot is fully guaranteed
-                  — no action needed.
-                </p>
-                <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                  Thanks again for sticking with me. I'm excited for this new system to make your booking experience
-                  easier and reliable. Now let's all do our pray for snow dances!
-                </p>
+                <div className="space-y-3">
+                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                    The new booking link found on this website is now my primary booking tool, and it's the best place
+                    to schedule your visit. The Google Calendar link is still available for now, but any appointments
+                    made through Google will require a deposit to hold your spot.
+                  </p>
+                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                    If you do use Google Calendar, please double-check the time zone in your confirmation email and
+                    email me right away if it looks off.
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-amber-200 dark:border-amber-800">
+                  <h4 className="font-semibold text-amber-800 dark:text-amber-200 mb-2 text-lg">Winter Shop Hours</h4>
+                  <p className="text-sm text-amber-600 dark:text-amber-400 mb-4">October 1st - April 1st</p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Sunday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">10 AM–6 PM</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Monday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Tuesday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">Closed</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Wednesday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Thursday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Friday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">9 AM–6 PM</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Saturday:</span>
+                      <span className="text-amber-700 dark:text-amber-300">9 AM–6 PM</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-2 space-y-2">
+                  <p className="text-sm text-amber-600 dark:text-amber-400 italic">
+                    Times are for appointments and boot pickups. All fittings and work is still by appointment.
+                  </p>
+                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                    Thanks again — I'm excited to see you in the shop, and as always… let's keep doing our pray-for-snow
+                    dances!
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -190,7 +222,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <div className="text-lg font-bold text-secondary mb-2">$180</div>
-                <div className="text-sm text-muted-foreground mb-4">or $90/hour</div>
+                <div className="text-sm text-muted-foreground mb-4"></div>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
@@ -307,6 +339,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Additional Services */}
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <h3 className="text-3xl font-bold text-center text-secondary mb-12">Additional Services</h3>
+          <div className="max-w-3xl mx-auto">
+            <ul className="space-y-4 text-lg">
+              <li className="flex items-center gap-3 py-3 border-b border-border/50">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-foreground">Snowboarding Boots</span>
+              </li>
+              <li className="flex items-center gap-3 py-3 border-b border-border/50">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex flex-col">
+                  <span className="text-foreground">Hockey Skates</span>
+                  <span className="text-sm text-muted-foreground">Stretches and insoles</span>
+                </div>
+              </li>
+              <li className="flex items-center gap-3 py-3 border-b border-border/50">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-foreground">Running, Hiking, or Everyday Shoes</span>
+              </li>
+              <li className="flex items-center gap-3 py-3 border-b border-border/50">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-foreground">Bike Insoles</span>
+              </li>
+              <li className="flex items-center gap-3 py-3">
+                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                <span className="text-foreground">Golf Shoes</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Name Brand Products */}
       <section
         className="relative py-16 bg-cover bg-center bg-no-repeat"
@@ -380,7 +446,7 @@ export default function HomePage() {
       {/* Professional Boot Fitting Process */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center text-secondary mb-8">Professional Boot Fitting Process</h3>
+          <h3 className="text-3xl font-bold text-center text-primary mb-8">Professional Boot Fitting Process</h3>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <img
@@ -423,7 +489,7 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-primary mb-8">Why Choose Wasatch Custom Fitz</h3>
+            <h3 className="text-3xl font-bold text-center text-secondary mb-8">Why Choose Wasatch Custom Fitz</h3>
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-6">
               <p className="text-lg text-foreground leading-relaxed italic">
                 "I know that some customers come in feeling like they've been dismissed or talked over in the past—like
@@ -441,7 +507,7 @@ export default function HomePage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold text-secondary mb-6">About the Fitter</h3>
+            <h3 className="text-3xl font-bold text-primary mb-6">About the Fitter</h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Bootfitting is part science, part art—and a little bit therapy. Every fit is a collaboration: I listen
               deeply, analyze each detail, and craft solutions that not only remove discomfort but also unlock
@@ -485,7 +551,7 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-primary mb-12">What Our Customers Say</h3>
+            <h3 className="text-3xl font-bold text-center text-secondary mb-12">What Our Customers Say</h3>
             <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
               <Card className="border-border hover:border-primary/50 transition-colors">
                 <CardHeader>
@@ -577,7 +643,7 @@ export default function HomePage() {
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-center text-secondary mb-8">Visit Our Shop</h3>
+            <h3 className="text-3xl font-bold text-center text-primary mb-8">Visit Our Shop</h3>
 
             <div className="flex justify-center mb-12">
               <img
@@ -639,6 +705,51 @@ export default function HomePage() {
               </Card>
             </div>
 
+            <Card className="border-border mt-8">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2" style={{ color: "var(--dark-blue)" }}>
+                  <Clock className="h-5 w-5" />
+                  Winter Shop Hours
+                </CardTitle>
+                <CardDescription>October 1st - April 1st</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Sunday:</span>
+                    <span className="text-muted-foreground">10 AM–6 PM</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Monday:</span>
+                    <span className="text-muted-foreground">2 PM–7 PM</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Tuesday:</span>
+                    <span className="text-muted-foreground">Closed</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Wednesday:</span>
+                    <span className="text-muted-foreground">2 PM–7 PM</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Thursday:</span>
+                    <span className="text-muted-foreground">2 PM–7 PM</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Friday:</span>
+                    <span className="text-muted-foreground">9 AM–6 PM</span>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <span className="font-medium text-foreground w-24">Saturday:</span>
+                    <span className="text-muted-foreground">9 AM–6 PM</span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground italic mt-4">
+                  Times are for appointments and boot pickups. All fittings and work is still by appointment.
+                </p>
+              </CardContent>
+            </Card>
+
             <div className="text-center mt-8">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
                 <a href={LINKS.BOOK_APPOINTMENT} target="_blank" rel="noopener noreferrer">
@@ -646,9 +757,64 @@ export default function HomePage() {
                 </a>
               </Button>
               <div className="flex flex-col items-center mt-6 space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Rush jobs and out-of-hours appointments available for a premium
-                </p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="link" className="text-muted-foreground hover:text-foreground p-0 h-auto text-sm">
+                      <Info className="h-3 w-3 mr-1" />
+                      View After-Hours Appointments & Waitlist Information
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                    <DialogHeader>
+                      <DialogTitle className="text-xl">After-Hours Appointments & Waitlist</DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-6 mt-4">
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">
+                          Need to Get in Quicker or Different Time?
+                        </h4>
+                        <p className="text-muted-foreground leading-relaxed">
+                          I know schedules can be tricky, so I offer a limited number of after-hours appointments for an
+                          additional $50 out-of-hours fee. If you need a time outside my posted hours, just reach out —
+                          I'll do my best to accommodate when I can. These are available by request and based on
+                          availability, which is very limited.
+                        </p>
+                      </div>
+
+                      <div className="pt-4 border-t border-border">
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Waitlist</h4>
+                        <p className="text-muted-foreground leading-relaxed mb-4">
+                          I do keep a waitlist for true last-minute openings — usually when someone has to cancel within
+                          24 hours due to an emergency. These spots come up quickly, are often short notice, and rare.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed mb-3">
+                          For the waitlist to work smoothly, I'll need a little information from you ahead of time:
+                        </p>
+                        <ul className="list-disc list-inside space-y-2 text-muted-foreground mb-4 ml-4">
+                          <li>Your last-minute availability (days/times you can come on short notice)</li>
+                          <li>How long it takes you to get to the shop</li>
+                          <li>What service or work you need (so I know whether the opening is long enough)</li>
+                        </ul>
+                        <p className="text-sm text-muted-foreground italic mb-3">
+                          Please note that if someone cancels in advance (within the allowed cancellation window), those
+                          spots usually get booked immediately through the system before I even see them — so the
+                          waitlist mainly applies to same-day or last-minute openings.
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed mb-3">
+                          If you'd like to be added to the waitlist, just reach out with the details above and I'll
+                          contact you if a matching spot opens up.
+                        </p>
+                        <p className="text-sm text-muted-foreground italic mb-2">
+                          Please keep in mind that last-minute openings are limited and not guaranteed, but I'll reach
+                          out if something becomes available.
+                        </p>
+                        <p className="text-sm text-muted-foreground italic">
+                          Waitlist spots go to the first person who confirms they can make it.
+                        </p>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
                 <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="link" className="text-muted-foreground hover:text-foreground p-0 h-auto text-sm">
