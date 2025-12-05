@@ -19,7 +19,7 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Button asChild className="bg-primary hover:bg-primary/90">
+            <Button asChild className="hidden sm:block bg-primary hover:bg-primary/90">
               <a href={LINKS.BOOK_APPOINTMENT} target="_blank" rel="noopener noreferrer">
                 Book Appointment
               </a>
