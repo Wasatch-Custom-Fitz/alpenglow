@@ -1,13 +1,17 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { MapPin, Phone, CheckCircle, Star, Info, Mountain, Clock } from "lucide-react"
+import { MapPin, Phone, CheckCircle, Star, Info, Mountain, Clock, Mail, MessageSquare } from "lucide-react"
 import ThemeToggle from "@/components/theme/ThemeToggle"
 import SnowmanLogo from "@/components/snowman/SnowmanLogo"
 import { IMAGE_URLS, LINKS, TELEPHONE } from "@/utils/constants"
+import { useState } from "react"
 
 export default function HomePage() {
+  const [afterHoursOpen, setAfterHoursOpen] = useState(false)
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -61,7 +65,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Scheduling Update Notice */}
+      {/* Communication & Booking Notice */}
       <section className="py-8 bg-amber-50 dark:bg-amber-950/20 border-b border-amber-200 dark:border-amber-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -69,65 +73,169 @@ export default function HomePage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-amber-800 dark:text-amber-200">
                   <Info className="h-5 w-5" />
-                  Shop Hours & Booking Update
+                  Shop Hours Communication & Booking
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-5">
                 <p className="text-amber-700 dark:text-amber-300 leading-relaxed text-base">
-                  Thank you so much for booking with me — I truly appreciate you being here.
+                  Thanks so much for visiting the website — I'm glad you're here! There is some helpful information on
+                  this page. You don't have to read all of it carefully, but please pay close attention to areas that
+                  are relevant to your visit.
                 </p>
-                <div className="space-y-3">
-                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                    The new booking link found on this website is now my primary booking tool, and it's the best place
-                    to schedule your visit. The Google Calendar link is still available for now, but any appointments
-                    made through Google will require a deposit to hold your spot.
-                  </p>
-                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                    If you do use Google Calendar, please double-check the time zone in your confirmation email and
-                    email me right away if it looks off.
-                  </p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-amber-200 dark:border-amber-800">
-                  <h4 className="font-semibold text-amber-800 dark:text-amber-200 mb-2 text-lg">Winter Shop Hours</h4>
-                  <p className="text-sm text-amber-600 dark:text-amber-400 mb-4">October 1st - April 1st</p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Sunday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">10 AM–6 PM</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Monday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Tuesday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">Closed</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Wednesday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Thursday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Friday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">9 AM–6 PM</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Saturday:</span>
-                      <span className="text-amber-700 dark:text-amber-300">9 AM–6 PM</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="pt-2 space-y-2">
-                  <p className="text-sm text-amber-600 dark:text-amber-400 italic">
-                    Times are for appointments and boot pickups. All fittings and work is still by appointment.
-                  </p>
-                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
-                    Thanks again — I'm excited to see you in the shop, and as always… let's keep doing our pray-for-snow
-                    dances!
+
+                <Accordion type="multiple" defaultValue={["communication"]} className="w-full">
+                  <AccordionItem value="communication" className="border-amber-200 dark:border-amber-800">
+                    <AccordionTrigger className="text-amber-800 dark:text-amber-200 font-semibold text-base hover:no-underline">
+                      Communication
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                          <Mail className="h-5 w-5 text-amber-700 dark:text-amber-300 mt-0.5 flex-shrink-0" />
+                          <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                            Email is the most reliable way to reach me and is always the first place I respond.
+                          </p>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <MessageSquare className="h-5 w-5 text-amber-700 dark:text-amber-300 mt-0.5 flex-shrink-0" />
+                          <div className="space-y-2">
+                            <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                              Text messages are best for brief, time-sensitive matters only. If you are having issues
+                              with your boots, you do not need to text ahead to explain the problem — just schedule an
+                              appointment. Boot concerns need to be assessed in person, and appointment time is set aside
+                              specifically to address them.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <Phone className="h-5 w-5 text-amber-700 dark:text-amber-300 mt-0.5 flex-shrink-0" />
+                          <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                            Phone calls are not answered directly, so email is the most effective way to reach me for
+                            most questions. I will try my best to call back voicemails as time permits. (Time is
+                            extremely limited for phone calls)
+                          </p>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="scheduling" className="border-amber-200 dark:border-amber-800">
+                    <AccordionTrigger className="text-amber-800 dark:text-amber-200 font-semibold text-base hover:no-underline">
+                      Scheduling Tips
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-4">
+                        <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                          When scheduling, please read the appointment descriptions carefully so we choose the correct
+                          amount of time for the work being done. For example:
+                        </p>
+                        <div className="grid sm:grid-cols-2 gap-3">
+                          <div className="rounded-lg border border-amber-200 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 p-4">
+                            <p className="font-medium text-amber-800 dark:text-amber-200 text-sm mb-1">
+                              Boot Work Drop-Off
+                            </p>
+                            <p className="text-xs text-amber-600 dark:text-amber-400 mb-2">15 minutes</p>
+                            <p className="text-amber-700 dark:text-amber-300 text-sm leading-relaxed">
+                              Minor shell or liner work that does not require you to be present.
+                            </p>
+                          </div>
+                          <div className="rounded-lg border border-amber-200 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/40 p-4">
+                            <p className="font-medium text-amber-800 dark:text-amber-200 text-sm mb-1">
+                              Custom Appointment
+                            </p>
+                            <p className="text-xs text-amber-600 dark:text-amber-400 mb-2">Extended timeframe</p>
+                            <p className="text-amber-700 dark:text-amber-300 text-sm leading-relaxed">
+                              Heat molding and services requiring you to be present.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="availability" className="border-amber-200 dark:border-amber-800">
+                    <AccordionTrigger className="text-amber-800 dark:text-amber-200 font-semibold text-base hover:no-underline">
+                      Availability & Waitlist
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-4">
+                        <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                          All scheduling availability is shown in the online booking calendar. If you don't see an
+                          opening, that means I'm fully booked — no hidden times, I promise 🙂. (Otherwise, see{" "}
+                          <button
+                            type="button"
+                            className="underline text-amber-800 dark:text-amber-200 font-medium hover:text-amber-900 dark:hover:text-amber-100 cursor-pointer"
+                            onClick={() => setAfterHoursOpen(true)}
+                          >
+                            overtime hours & waitlist details
+                          </button>
+                          )
+                        </p>
+
+                        <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                          A waitlist is available for last-minute emergency cancellations only. When an unexpected
+                          opening occurs on short notice, waitlist clients may be contacted. Otherwise, newly available
+                          appointments are booked directly through the online calendar.
+                        </p>
+
+                        <p className="text-amber-700 dark:text-amber-300 leading-relaxed">
+                          Appointments cancelled with proper notice are released to the online calendar and are
+                          available to anyone who books them. These openings are not individually monitored or held.
+                        </p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="hours" className="border-amber-200 dark:border-amber-800 border-b-0">
+                    <AccordionTrigger className="text-amber-800 dark:text-amber-200 font-semibold text-base hover:no-underline">
+                      Winter Shop Hours
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div>
+                        <p className="text-sm text-amber-600 dark:text-amber-400 mb-4">October 1st - April 1st</p>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Sunday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">10 AM–6 PM</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Monday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Tuesday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">Closed</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Wednesday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Thursday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">2 PM–7 PM</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Friday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">9 AM–6 PM</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <span className="font-medium text-amber-800 dark:text-amber-200 w-24">Saturday:</span>
+                            <span className="text-amber-700 dark:text-amber-300">9 AM–6 PM</span>
+                          </div>
+                        </div>
+                        <p className="text-sm text-amber-600 dark:text-amber-400 italic mt-4">
+                          Times are for appointments and boot pickups. All fittings and work is still by appointment.
+                        </p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                <div className="text-center rounded-lg bg-amber-100/80 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 px-6 py-4">
+                  <p className="text-amber-700 dark:text-amber-300 leading-relaxed italic">
+                    Thank you so much — I truly appreciate you being here and look forward to working with you.
                   </p>
                 </div>
               </CardContent>
@@ -756,14 +864,17 @@ export default function HomePage() {
                 </a>
               </Button>
               <div className="flex flex-col items-center mt-6 space-y-4">
-                <Dialog>
+                <Dialog open={afterHoursOpen} onOpenChange={setAfterHoursOpen}>
                   <DialogTrigger asChild>
                     <Button variant="link" className="text-muted-foreground hover:text-foreground p-0 h-auto text-sm">
                       <Info className="h-3 w-3 mr-1" />
                       View After-Hours Appointments & Waitlist Information
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                  <DialogContent
+                    className="max-w-2xl max-h-[80vh] overflow-y-auto"
+                    onCloseAutoFocus={(e) => e.preventDefault()}
+                  >
                     <DialogHeader>
                       <DialogTitle className="text-xl">After-Hours Appointments & Waitlist</DialogTitle>
                     </DialogHeader>
